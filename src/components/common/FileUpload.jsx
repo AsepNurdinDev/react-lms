@@ -7,9 +7,9 @@ function FileUpload({ label, accept, value, onChange, helper = "Pilih file dari 
     const file = event.target.files?.[0];
     if (!file) return;
 
-    const maxSize = 2 * 1024 * 1024;
+    const maxSize = 1 * 1024 * 1024;
     if (file.size > maxSize) {
-      alert("Ukuran file maksimal 2 MB untuk demo frontend ini.");
+      alert("Ukuran file maksimal 1 MB untuk demo frontend ini.");
       event.target.value = "";
       return;
     }

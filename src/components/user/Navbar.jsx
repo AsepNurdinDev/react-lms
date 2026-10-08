@@ -6,6 +6,7 @@ const links = [
   { to: "/", label: "Beranda", public: true },
   { to: "/courses", label: "Courses", public: true },
   { to: "/my-courses", label: "My Courses", public: false },
+  { to: "/profile", label: "Profil", public: false },
 ];
 
 function Navbar({ user, onLogout }) {

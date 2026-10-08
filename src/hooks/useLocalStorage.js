@@ -1,7 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-// Hook sederhana: state biasa yang nilainya juga disimpan di localStorage.
-// Dipakai seperti useState: const [nilai, setNilai] = useLocalStorage("kunci", nilaiAwal)
 function useLocalStorage(key, initialValue) {
   const [value, setValue] = useState(() => {
     try {
@@ -12,9 +10,30 @@ function useLocalStorage(key, initialValue) {
     }
   });
 
-  function setStoredValue(newValue) {
-    setValue(newValue);
-    localStorage.setItem(key, JSON.stringify(newValue));
+  useEffect(() => {
+    function syncValue(event) {
+      if (event.key !== key) return;
+      try {
+        setValue(event.detail);
+      } catch {
+        // Abaikan data localStorage yang tidak valid.
+      }
+    }
+    window.addEventListener("lms-storage-change", syncValue);
+    return () => window.removeEventListener("lms-storage-change", syncValue);
+  }, [key]);
+
+  function setStoredValue(nextValue) {
+    setValue((currentValue) => {
+      const resolvedValue = typeof nextValue === "function" ? nextValue(currentValue) : nextValue;
+      try {
+        localStorage.setItem(key, JSON.stringify(resolvedValue));
+        window.dispatchEvent(new CustomEvent("lms-storage-change", { detail: resolvedValue, key }));
+      } catch (error) {
+        console.error(`Gagal menyimpan ${key} ke localStorage.`, error);
+      }
+      return resolvedValue;
+    });
   }
 
   return [value, setStoredValue];

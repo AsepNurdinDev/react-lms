@@ -11,7 +11,6 @@ function AdminHeader({ user, onMenuClick, onSidebarToggle, collapsed, onLogout }
         >
           ☰
         </button>
-        <button className="hidden rounded-lg border border-gray-300 px-3 py-1.5 text-sm lg:block" onClick={onSidebarToggle}>{collapsed ? "Tampilkan Sidebar" : "Sembunyikan Sidebar"}</button>
         <span className="font-medium text-gray-800">Halo, {user.name}</span>
       </div>
       <Button variant="secondary" onClick={onLogout}>

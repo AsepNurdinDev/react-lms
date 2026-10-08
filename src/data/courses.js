@@ -18,7 +18,7 @@ export const courses = [
     level: "Beginner",
     duration: "8 Jam",
     students: 120,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Pengenalan JavaScript", content: "JavaScript adalah bahasa pemrograman yang berjalan di browser. Dengan JavaScript, halaman web bisa menjadi interaktif." },
       { id: 2, type: "text", title: "Variabel dan Tipe Data", content: "Variabel dibuat dengan let dan const. Tipe data dasar meliputi string, number, boolean, array, dan object." },
@@ -36,7 +36,7 @@ export const courses = [
     level: "Beginner",
     duration: "10 Jam",
     students: 85,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Apa itu React?", content: "React adalah library JavaScript untuk membangun antarmuka berbasis component." },
       { id: 2, type: "text", title: "JSX dan Component", content: "JSX adalah sintaks mirip HTML di dalam JavaScript. Component adalah function yang mengembalikan JSX." },
@@ -55,7 +55,7 @@ export const courses = [
     level: "Beginner",
     duration: "6 Jam",
     students: 64,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Konsep Utility-First", content: "Tailwind menyediakan class kecil seperti p-4 dan text-center yang digabung langsung di elemen HTML." },
       { id: 2, type: "text", title: "Spacing, Warna, dan Typography", content: "Atur jarak dengan p dan m, warna dengan bg dan text, serta ukuran huruf dengan text-sm sampai text-4xl." },
@@ -73,7 +73,7 @@ export const courses = [
     level: "Beginner",
     duration: "7 Jam",
     students: 98,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Perbedaan UI dan UX", content: "UI berkaitan dengan tampilan, sedangkan UX berkaitan dengan pengalaman saat menggunakan produk." },
       { id: 2, type: "text", title: "Prinsip Desain", content: "Prinsip dasar desain meliputi kontras, hierarki, keselarasan, dan konsistensi." },
@@ -91,7 +91,7 @@ export const courses = [
     level: "Intermediate",
     duration: "12 Jam",
     students: 56,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Pengenalan Node.js", content: "Node.js memungkinkan JavaScript dijalankan di server, di luar browser." },
       { id: 2, type: "text", title: "Routing di Express", content: "Express memudahkan pembuatan route seperti GET /users dan POST /users." },
@@ -109,7 +109,7 @@ export const courses = [
     level: "Beginner",
     duration: "6 Jam",
     students: 143,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Konsep Database", content: "Database menyimpan data dalam tabel yang terdiri dari baris dan kolom." },
       { id: 2, type: "text", title: "Membuat Tabel", content: "Gunakan CREATE TABLE untuk membuat tabel dan menentukan tipe data tiap kolom." },
@@ -127,7 +127,7 @@ export const courses = [
     level: "Beginner",
     duration: "5 Jam",
     students: 210,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Struktur Dokumen HTML", content: "Setiap halaman HTML memiliki elemen html, head, dan body." },
       { id: 2, type: "text", title: "Tag Dasar", content: "Tag yang sering dipakai: h1 sampai h6, p, a, img, ul, dan table." },
@@ -145,7 +145,7 @@ export const courses = [
     level: "Beginner",
     duration: "9 Jam",
     students: 175,
-    image: "/course-placeholder.svg",
+    image: "/images/courses/default.svg",
     lessons: [
       { id: 1, type: "text", title: "Instalasi dan Hello World", content: "Install Python lalu jalankan program pertama dengan print(\"Hello, World!\")." },
       { id: 2, type: "text", title: "Variabel dan Operator", content: "Python tidak membutuhkan deklarasi tipe. Operator dasar: +, -, *, /, dan %." },

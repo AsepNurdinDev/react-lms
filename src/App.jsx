@@ -11,6 +11,7 @@ import CourseDetail from "./pages/user/CourseDetail";
 import Checkout from "./pages/user/Checkout";
 import MyCourses from "./pages/user/MyCourses";
 import Learning from "./pages/user/Learning";
+import Profile from "./pages/user/Profile";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminCourses from "./pages/admin/Courses";
 import AdminUsers from "./pages/admin/Users";
@@ -35,8 +36,10 @@ function App() {
         <Route path="/courses/:id" element={<CourseDetail />} />
         <Route path="/checkout/:id" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
         <Route path="/my-courses" element={<ProtectedRoute><MyCourses /></ProtectedRoute>} />
-        <Route path="/learning/:id" element={<ProtectedRoute><Learning /></ProtectedRoute>} />
+        <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Route>
+
+      <Route path="/learning/:id" element={<ProtectedRoute><Learning /></ProtectedRoute>} />
 
       <Route element={<AdminLayout />}>
         <Route path="/admin" element={<AdminDashboard />} />
